@@ -14,9 +14,6 @@ class NewComment extends React.Component {
       comment: comment,
     };
 
-    // ISSUE: NewComment is not rendered through a route, hence there aren't any ROUTE props. How to compare routeprops?
-    // SOLUTION: Instead, in VideoDescription, where we are calling NewComment, pass the {video.id} as props to NewComment.
-
     axios
       .post(
         `https://project-2-api.herokuapp.com/videos/${this.props.videoId}/comments?api_key=${apiKey}`,
